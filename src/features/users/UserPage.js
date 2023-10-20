@@ -31,10 +31,11 @@ const UserPage = () => {
   }
 
   return (
-    <section>
-      <h2>{user?.name}</h2>
+    <section className="grid gap-2">
+      <h2 className="heading-2">{user?.name}</h2>
+      <p className="mb-4">{postsForUser?.ids.length || "..."} posts</p>
 
-      <ol>{content}</ol>
+      <ol className="grid gap-2">{content}</ol>
     </section>
   );
 };

@@ -44,9 +44,9 @@ const AddPostForm = () => {
   ));
 
   return (
-    <section>
-      <h2>Add a New Post</h2>
-      <form>
+    <section className="max-w-sm mx-auto">
+      <h2 className="heading-2">Add a New Post</h2>
+      <form className="grid mt-4 gap-1">
         <label htmlFor="postTitle">Post Title:</label>
         <input
           type="text"
@@ -54,20 +54,31 @@ const AddPostForm = () => {
           name="postTitle"
           value={title}
           onChange={onTitleChanged}
+          className="p-2"
         />
-        <label htmlFor="postAuthor">Author:</label>
-        <select id="postAuthor" value={userId} onChange={onAuthorChanged}>
+        <label htmlFor="postAuthor" className="mt-2">
+          Author:
+        </label>
+        <select id="postAuthor" value={userId} onChange={onAuthorChanged} className="p-2">
           <option value=""></option>
           {usersOptions}
         </select>
-        <label htmlFor="postContent">Content:</label>
+        <label htmlFor="postContent" className="mt-2">
+          Content:
+        </label>
         <textarea
           id="postContent"
           name="postContent"
           value={content}
           onChange={onContentChanged}
+          className="p-2 min-h-[8em]"
         />
-        <button type="button" onClick={onSavePostClicked} disabled={!canSave}>
+        <button
+          type="button"
+          onClick={onSavePostClicked}
+          disabled={!canSave}
+          className="font-bold mt-4 py-2 px-4 bg-indigo-700 hover:bg-indigo-800 transition-colors text-white rounded-md cursor-pointer"
+        >
           Save Post
         </button>
       </form>

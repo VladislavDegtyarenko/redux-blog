@@ -30,6 +30,6 @@ const ReactionButtons = ({ post }) => {
     );
   });
 
-  return <div>{reactionButtons}</div>;
+  return <div className="flex gap-4">{reactionButtons}</div>;
 };
 export default ReactionButtons;

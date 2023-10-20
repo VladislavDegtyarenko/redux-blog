@@ -20,6 +20,6 @@ const PostsList = () => {
     content = <p>{error}</p>;
   }
 
-  return <section>{content}</section>;
+  return <section className="grid md:grid-cols-2 gap-8">{content}</section>;
 };
 export default PostsList;
